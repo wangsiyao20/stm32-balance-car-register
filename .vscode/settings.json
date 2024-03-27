@@ -6,6 +6,8 @@
         "inf_tb6612.h": "c",
         "int_encoder.h": "c",
         "stm32f10x.h": "c",
-        "dri_i2c.h": "c"
+        "dri_i2c.h": "c",
+        "inf_mpu6050.h": "c",
+        "stddef.h": "c"
     }
 }

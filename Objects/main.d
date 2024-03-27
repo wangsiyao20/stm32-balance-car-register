@@ -11,3 +11,5 @@
 .\objects\main.o: .\Inf\Inf_TB6612.h
 .\objects\main.o: .\Dri\Dri_TIM.h
 .\objects\main.o: .\Inf\Encoder\Int_Encoder.h
+.\objects\main.o: .\Inf\MPU6050\Inf_MPU6050.h
+.\objects\main.o: .\Dri\Dri_I2C.h

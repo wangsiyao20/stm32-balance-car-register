@@ -8,7 +8,7 @@ I (Start\core_cm3.h)(0x61605444)
 I (C:\Keil_v5\ARM\02_arm5_compiler\include\stdint.h)(0x6025237E)
 I (Start\system_stm32f10x.h)(0x61605444)
 F (.\Start\startup_stm32f10x_md.s)(0x61605445)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-IC:\Users\admin\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include--pd "__UVISION_VERSION SETA 538" --pd "STM32F10X_MD SETA 1"--list .\listings\startup_stm32f10x_md.lst --xref -o .\objects\startup_stm32f10x_md.o --depend .\objects\startup_stm32f10x_md.d)
-F (.\User\main.c)(0x66037657)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Start -I .\User -I .\Mid\FreeRTOS\include -I .\Mid\FreeRTOS\portable -I .\Mid\FreeRTOS -I .\Dri -I .\Inf -I .\Dri\Usart -I .\App -I .\Com -I .\Inf\Encoder -I .\Inf\MPU6050-IC:\Users\admin\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DSTM32F10X_MD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\User\main.c)(0x6603FFF1)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Start -I .\User -I .\Mid\FreeRTOS\include -I .\Mid\FreeRTOS\portable -I .\Mid\FreeRTOS -I .\Dri -I .\Inf -I .\Dri\Usart -I .\App -I .\Com -I .\Inf\Encoder -I .\Inf\MPU6050-IC:\Users\admin\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DSTM32F10X_MD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (C:\Keil_v5\ARM\02_arm5_compiler\include\stdint.h)(0x6025237E)
 I (.\Start\stm32f10x.h)(0x61605444)
 I (.\Start\core_cm3.h)(0x61605444)
@@ -21,6 +21,8 @@ I (.\Dri\Dri_SPI.h)(0x6600E6ED)
 I (.\Inf\Inf_TB6612.h)(0x6602B9B5)
 I (.\Dri\Dri_TIM.h)(0x6603B350)
 I (.\Inf\Encoder\Int_Encoder.h)(0x6602CB47)
+I (.\Inf\MPU6050\Inf_MPU6050.h)(0x66040003)
+I (.\Dri\Dri_I2C.h)(0x6603B23E)
 F (.\Mid\FreeRTOS\FreeRTOSConfig.h)(0x660139E4)()
 F (.\Mid\FreeRTOS\source\croutine.c)(0x64020E50)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Start -I .\User -I .\Mid\FreeRTOS\include -I .\Mid\FreeRTOS\portable -I .\Mid\FreeRTOS -I .\Dri -I .\Inf -I .\Dri\Usart -I .\App -I .\Com -I .\Inf\Encoder -I .\Inf\MPU6050-IC:\Users\admin\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DSTM32F10X_MD-o .\objects\croutine.o --omf_browse .\objects\croutine.crf --depend .\objects\croutine.d)
 I (.\Mid\FreeRTOS\include\FreeRTOS.h)(0x64020E50)
@@ -216,4 +218,10 @@ I (.\Start\core_cm3.h)(0x61605444)
 I (C:\Keil_v5\ARM\02_arm5_compiler\include\stdint.h)(0x6025237E)
 I (.\Start\system_stm32f10x.h)(0x61605444)
 I (.\Dri\Dri_TIM.h)(0x6603B350)
-F (.\Inf\MPU6050\Inf_MPU6050.c)(0x6603B2F2)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Start -I .\User -I .\Mid\FreeRTOS\include -I .\Mid\FreeRTOS\portable -I .\Mid\FreeRTOS -I .\Dri -I .\Inf -I .\Dri\Usart -I .\App -I .\Com -I .\Inf\Encoder -I .\Inf\MPU6050-IC:\Users\admin\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DSTM32F10X_MD-o .\objects\inf_mpu6050.o --omf_browse .\objects\inf_mpu6050.crf --depend .\objects\inf_mpu6050.d)
+F (.\Inf\MPU6050\Inf_MPU6050.c)(0x6603FFE1)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\Start -I .\User -I .\Mid\FreeRTOS\include -I .\Mid\FreeRTOS\portable -I .\Mid\FreeRTOS -I .\Dri -I .\Inf -I .\Dri\Usart -I .\App -I .\Com -I .\Inf\Encoder -I .\Inf\MPU6050-IC:\Users\admin\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DSTM32F10X_MD-o .\objects\inf_mpu6050.o --omf_browse .\objects\inf_mpu6050.crf --depend .\objects\inf_mpu6050.d)
+I (Inf\MPU6050\Inf_MPU6050.h)(0x66040003)
+I (.\Start\stm32f10x.h)(0x61605444)
+I (.\Start\core_cm3.h)(0x61605444)
+I (C:\Keil_v5\ARM\02_arm5_compiler\include\stdint.h)(0x6025237E)
+I (.\Start\system_stm32f10x.h)(0x61605444)
+I (.\Dri\Dri_I2C.h)(0x6603B23E)

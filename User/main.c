@@ -6,6 +6,7 @@
 #include "Inf_OLED1315.h"
 #include "Inf_TB6612.h"
 #include "Int_Encoder.h"
+#include "Inf_MPU6050.h"
 
 /**
  * @description: for循环实现延时函数
@@ -38,15 +39,23 @@ int main()
 	for_delay_ms(100);
 	// Inf_TB6612_SetPWM(5, 5);
 	
-	Int_Encoder_Init();
+	// Int_Encoder_Init();
 
-	short count2 = 0, count3 = 0;
+	// short count2 = 0, count3 = 0;
+
+	Inf_MPU6050_Init();
+
+	// 读取寄存器的地址
+	uint8_t read_dat = 0;
+	if(!Inf_MPU6050_ReadByte(MPU_DEVICE_ID_REG, &read_dat)) {
+		printf("读取到MPU6050的ID:%d\r\n", read_dat);
+	}
 
 	while(1) {
-		count2 = Int_Encoder_ReadCounter(2);
-		count3 = Int_Encoder_ReadCounter(3);
-		printf("读到的值为：%dxxxxxxx%d\r\n", count2, count3);
-		for_delay_ms(1000);
+		// count2 = Int_Encoder_ReadCounter(2);
+		// count3 = Int_Encoder_ReadCounter(3);
+		// printf("读到的值为：%dxxxxxxx%d\r\n", count2, count3);
+		// for_delay_ms(1000);
 	}
 }
 
