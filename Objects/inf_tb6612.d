@@ -1,0 +1,9 @@
+.\objects\inf_tb6612.o: Inf\Inf_TB6612.c
+.\objects\inf_tb6612.o: Inf\Inf_TB6612.h
+.\objects\inf_tb6612.o: .\Start\stm32f10x.h
+.\objects\inf_tb6612.o: .\Start\core_cm3.h
+.\objects\inf_tb6612.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\stdint.h
+.\objects\inf_tb6612.o: .\Start\system_stm32f10x.h
+.\objects\inf_tb6612.o: .\Dri\Dri_TIM.h
+.\objects\inf_tb6612.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\stdlib.h
+.\objects\inf_tb6612.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\stdio.h

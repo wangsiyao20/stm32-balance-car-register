@@ -1,0 +1,13 @@
+.\objects\main.o: User\main.c
+.\objects\main.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\stdint.h
+.\objects\main.o: .\Start\stm32f10x.h
+.\objects\main.o: .\Start\core_cm3.h
+.\objects\main.o: .\Start\system_stm32f10x.h
+.\objects\main.o: .\Dri\Usart\Driver_Usart.h
+.\objects\main.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\stdio.h
+.\objects\main.o: .\App\App_Task.h
+.\objects\main.o: .\Inf\Inf_OLED1315.h
+.\objects\main.o: .\Dri\Dri_SPI.h
+.\objects\main.o: .\Inf\Inf_TB6612.h
+.\objects\main.o: .\Dri\Dri_TIM.h
+.\objects\main.o: .\Inf\Encoder\Int_Encoder.h

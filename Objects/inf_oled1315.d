@@ -1,0 +1,9 @@
+.\objects\inf_oled1315.o: Inf\Inf_OLED1315.c
+.\objects\inf_oled1315.o: Inf\Inf_OLED1315.h
+.\objects\inf_oled1315.o: .\Start\stm32f10x.h
+.\objects\inf_oled1315.o: .\Start\core_cm3.h
+.\objects\inf_oled1315.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\stdint.h
+.\objects\inf_oled1315.o: .\Start\system_stm32f10x.h
+.\objects\inf_oled1315.o: .\Dri\Dri_SPI.h
+.\objects\inf_oled1315.o: .\App\App_Task.h
+.\objects\inf_oled1315.o: Inf\oledfont.h

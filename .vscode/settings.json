@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "inf_oled1315.h": "c",
+        "oledfont.h": "c",
+        "dri_tim.h": "c",
+        "inf_tb6612.h": "c",
+        "int_encoder.h": "c",
+        "stm32f10x.h": "c",
+        "dri_i2c.h": "c"
+    }
+}

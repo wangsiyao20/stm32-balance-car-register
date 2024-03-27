@@ -1,0 +1,14 @@
+.\objects\app_task.o: App\App_Task.c
+.\objects\app_task.o: App\App_Task.h
+.\objects\app_task.o: .\Mid\FreeRTOS\include\FreeRTOS.h
+.\objects\app_task.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\stddef.h
+.\objects\app_task.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\stdint.h
+.\objects\app_task.o: .\Mid\FreeRTOS\FreeRTOSConfig.h
+.\objects\app_task.o: .\Mid\FreeRTOS\include\projdefs.h
+.\objects\app_task.o: .\Mid\FreeRTOS\include\portable.h
+.\objects\app_task.o: .\Mid\FreeRTOS\include\deprecated_definitions.h
+.\objects\app_task.o: .\Mid\FreeRTOS\portable\portmacro.h
+.\objects\app_task.o: .\Mid\FreeRTOS\include\mpu_wrappers.h
+.\objects\app_task.o: .\Mid\FreeRTOS\include\task.h
+.\objects\app_task.o: .\Mid\FreeRTOS\include\list.h
+.\objects\app_task.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\stdio.h
