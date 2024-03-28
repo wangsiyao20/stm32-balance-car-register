@@ -72,7 +72,17 @@
 #define MPU_FIFO_RW_REG         0X74    //FIFO读写寄存器
 #define MPU_DEVICE_ID_REG       0X75    //器件ID寄存器
 
+typedef struct Inf_MPU6050_st
+{
+    uint16_t acc_x;      // X轴加速度
+    uint16_t acc_y;      // Y轴加速度
+    uint16_t acc_z;      // Z轴加速度
+} Acc_Coordinate_Struct;
+
+
 void Inf_MPU6050_Init(void);
+
+uint16_t Inf_MPU6050_GetAccl(short *ax, short *ay, short *az);
 
 uint8_t Inf_MPU6050_WriteByte(uint8_t reg_addr, uint8_t byte);
 

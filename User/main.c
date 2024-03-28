@@ -22,6 +22,7 @@ void for_delay_ms(uint32_t ms)
     } while (Delay--);
 }
 
+
 int main() 
 {
 	
@@ -44,6 +45,7 @@ int main()
 	// short count2 = 0, count3 = 0;
 
 	Inf_MPU6050_Init();
+	// Dri_I2C_Init();
 
 	// 读取寄存器的地址
 	uint8_t read_dat = 0;
@@ -51,11 +53,19 @@ int main()
 		printf("读取到MPU6050的ID:%d\r\n", read_dat);
 	}
 
+	short ax=0,ay=0,az=0;
 	while(1) {
+		/* ===============测试MPU6050读取原始数据============================ */
+        Inf_MPU6050_GetAccl(&ax,&ay,&az);
+        printf("==============================\r\n");
+        printf("ax=%d\r\n",ax);
+        printf("ay=%d\r\n",ay);
+        printf("az=%d\r\n",az);
+		ax=0,ay=0,az=0;
 		// count2 = Int_Encoder_ReadCounter(2);
 		// count3 = Int_Encoder_ReadCounter(3);
 		// printf("读到的值为：%dxxxxxxx%d\r\n", count2, count3);
-		// for_delay_ms(1000);
+		for_delay_ms(100);
 	}
 }
 
