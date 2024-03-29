@@ -13,3 +13,6 @@
 .\objects\main.o: .\Inf\Encoder\Int_Encoder.h
 .\objects\main.o: .\Inf\MPU6050\Inf_MPU6050.h
 .\objects\main.o: .\Dri\Dri_I2C.h
+.\objects\main.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\stdlib.h
+.\objects\main.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\math.h
+.\objects\main.o: .\Com\Com_Filter.h

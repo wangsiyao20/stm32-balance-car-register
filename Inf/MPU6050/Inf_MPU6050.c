@@ -164,9 +164,7 @@ void Inf_MPU6050_Init(void) {
 uint16_t Inf_MPU6050_GetAccl(short *ax, short *ay, short *az)
 {
     uint8_t acc_buff[6];
-    // Acc_Coordinate_Struct * coordinate_acc;
     /* 每个轴对应2个寄存器：高8位、低8位， 第一个是0x3B（X轴的高位） */
-    // Inf_MPU6050_ReadStr(MPU_ACCEL_XOUTH_REG, (uint8_t *)coordinate_acc, 6);
     Inf_MPU6050_ReadStr(MPU_ACCEL_XOUTH_REG,acc_buff,6);
     /* 
         acc_buff[0]:X轴加速度的高8位，
@@ -179,10 +177,31 @@ uint16_t Inf_MPU6050_GetAccl(short *ax, short *ay, short *az)
     *ax= ((short)acc_buff[0] << 8) | acc_buff[1];
     *ay= ((short)acc_buff[2] << 8) | acc_buff[3];
     *az= ((short)acc_buff[4] << 8) | acc_buff[5];
-    // *ax = coordinate_acc->acc_x;
-    // *ay = coordinate_acc->acc_y;
-    // *az = coordinate_acc->acc_z;
-    
+}
+
+/**
+ * @description: 获取陀螺仪的角速度原始数据
+ * @param {short} *gx
+ * @param {short} *gy
+ * @param {short} *gz
+ * @return {*}
+ */
+uint16_t Inf_MPU6050_GetGyro(short *gx, short *gy, short *gz)
+{
+    uint8_t gyro_buff[6];
+    /* 每个轴对应2个寄存器：高8位、低8位， 第一个是0x43（X轴的高位） */
+    Inf_MPU6050_ReadStr(MPU_GYRO_XOUTH_REG,gyro_buff,6);
+    /* 
+        gyro_buff[0]:X轴角速度的高8位，
+        gyro_buff[1]:X轴角速度的低8位，
+        gyro_buff[2]:Y轴角速度的高8位，
+        gyro_buff[3]:Y轴角速度的低8位，
+        gyro_buff[4]:Z轴角速度的高8位，
+        gyro_buff[5]:Z轴角速度的低8位，
+     */
+    *gx= ((short)gyro_buff[0] << 8) | gyro_buff[1];
+    *gy= ((short)gyro_buff[2] << 8) | gyro_buff[3];
+    *gz= ((short)gyro_buff[4] << 8) | gyro_buff[5];
 }
 
 /**

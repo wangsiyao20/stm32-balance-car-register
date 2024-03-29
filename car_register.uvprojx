@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Start;.\User;.\Mid\FreeRTOS\include;.\Mid\FreeRTOS\portable;.\Mid\FreeRTOS;.\Dri;.\Inf;.\Dri\Usart;.\App;.\Com;.\Inf\Encoder;.\Inf\MPU6050</IncludePath>
+              <IncludePath>.\Start;.\User;.\Mid\FreeRTOS\include;.\Mid\FreeRTOS\portable;.\Mid\FreeRTOS;.\Dri;.\Inf;.\Dri\Usart;.\App;.\Com;.\Inf\Encoder;.\Inf\MPU6050;.\Com</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -538,6 +538,13 @@
         </Group>
         <Group>
           <GroupName>Com</GroupName>
+          <Files>
+            <File>
+              <FileName>Com_Filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Com\Com_Filter.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Inf/Encoder</GroupName>
