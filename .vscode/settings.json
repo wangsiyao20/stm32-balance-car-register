@@ -8,6 +8,7 @@
         "stm32f10x.h": "c",
         "dri_i2c.h": "c",
         "inf_mpu6050.h": "c",
-        "stddef.h": "c"
+        "stddef.h": "c",
+        "dri_adc.h": "c"
     }
 }

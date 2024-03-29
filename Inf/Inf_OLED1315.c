@@ -117,11 +117,11 @@ void Inf_OLED1315_ShowChar(uint8_t x, uint8_t y, uint8_t chr, uint8_t size1, uin
 		if(size1==8)
 			  {temp=asc2_0806[chr1][i];} //调用0806字体
 		else if(size1==12)
-        {temp=asc2_0806[chr1][i];} //调用1206字体
+        {temp=asc2_1206[chr1][i];} //调用1206字体
 		else if(size1==16)
-        {temp=asc2_0806[chr1][i];} //调用1608字体
+        {temp=asc2_1608[chr1][i];} //调用1608字体
 		else if(size1==24)
-        {temp=asc2_0806[chr1][i];} //调用2412字体
+        {temp=asc2_2412[chr1][i];} //调用2412字体
 		else return;
 		for(m=0;m<8;m++)
 		{
@@ -137,6 +137,22 @@ void Inf_OLED1315_ShowChar(uint8_t x, uint8_t y, uint8_t chr, uint8_t size1, uin
   }
 }
 
+
+//显示字符串
+//x,y:起点坐标  
+//size1:字体大小 
+//*chr:字符串起始地址 
+//mode:0,反色显示;1,正常显示
+void Inf_OLED1315_ShowString(uint8_t x,uint8_t y,uint8_t *chr,uint8_t size1,uint8_t mode)
+{
+	while((*chr>=' ')&&(*chr<='~'))//判断是不是非法字符!
+	{
+		Inf_OLED1315_ShowChar(x,y,*chr,size1,mode);
+		if(size1==8)x+=6;
+		else x+=size1/2;
+		chr++;
+  }
+}
 
 
 /**

@@ -489,6 +489,11 @@
               <FileType>1</FileType>
               <FilePath>.\Dri\Dri_I2C.c</FilePath>
             </File>
+            <File>
+              <FileName>Dri_ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Dri\Dri_ADC.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

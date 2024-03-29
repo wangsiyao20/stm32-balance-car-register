@@ -40,7 +40,8 @@ int main()
 	Inf_OLED1315_Init();
 	Inf_OLED1315_Clear();
 	Inf_OLED1315_DrawPoint(10, 10, 1);
-	Inf_OLED1315_ShowChar(20, 20, 'a', 8, 1);
+	Inf_OLED1315_ShowChar(20, 20, 'a', 16, 1);
+	Inf_OLED1315_ShowString(10, 36, "abc     ", 16, 1);
 	Inf_OLED1315_Refresh();
 	
 
