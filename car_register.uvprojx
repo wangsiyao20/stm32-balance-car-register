@@ -549,6 +549,11 @@
               <FileType>1</FileType>
               <FilePath>.\Com\Com_Filter.c</FilePath>
             </File>
+            <File>
+              <FileName>Com_PID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Com\Com_PID.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

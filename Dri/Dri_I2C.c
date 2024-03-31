@@ -92,17 +92,18 @@ void Dri_I2C_NACK(void)
 */
 uint8_t Dri_I2C_SendAddr(uint8_t addr) {
 
-    uint16_t timeout = 0xffff;
-    while (((I2C2->SR1 & I2C_SR1_TXE) == 0) && timeout)
-    {
-        timeout--;
-    }
+    // TODO 等待这个会影响小车的数据读取，，根本不要等这个位
+    // uint16_t timeout = 0xffff;
+    // while (((I2C2->SR1 & I2C_SR1_TXE) == 0) && timeout)
+    // {
+    //     timeout--;
+    // }
 
     /* 把数据写入到数据寄存器中 */
     I2C2->DR = addr;
 
     /* 等待地址发送完成。*/
-    timeout = 0xffff;
+    uint16_t timeout = 0xffff;
     while(!(I2C2->SR1 & I2C_SR1_ADDR) /* 地址还没有发送结束 */ && timeout) {
         timeout--;
     }

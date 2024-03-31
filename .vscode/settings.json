@@ -9,6 +9,8 @@
         "dri_i2c.h": "c",
         "inf_mpu6050.h": "c",
         "stddef.h": "c",
-        "dri_adc.h": "c"
+        "dri_adc.h": "c",
+        "app_car.h": "c",
+        "com_pid.h": "c"
     }
 }

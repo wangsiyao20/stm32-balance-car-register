@@ -3,9 +3,9 @@
 .\objects\main.o: .\Start\stm32f10x.h
 .\objects\main.o: .\Start\core_cm3.h
 .\objects\main.o: .\Start\system_stm32f10x.h
+.\objects\main.o: .\App\App_Car.h
 .\objects\main.o: .\Dri\Usart\Driver_Usart.h
 .\objects\main.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\stdio.h
-.\objects\main.o: .\App\App_Task.h
 .\objects\main.o: .\Inf\Inf_OLED1315.h
 .\objects\main.o: .\Dri\Dri_SPI.h
 .\objects\main.o: .\Inf\Inf_TB6612.h
@@ -16,3 +16,6 @@
 .\objects\main.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\stdlib.h
 .\objects\main.o: C:\Keil_v5\ARM\02_arm5_compiler\Bin\..\include\math.h
 .\objects\main.o: .\Com\Com_Filter.h
+.\objects\main.o: .\Dri\Dri_ADC.h
+.\objects\main.o: .\Com\Com_PID.h
+.\objects\main.o: .\App\App_Task.h

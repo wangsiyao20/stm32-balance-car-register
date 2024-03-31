@@ -3,20 +3,20 @@
         {
             "name": "Target 1",
             "includePath": [
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\Start",
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\User",
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\Mid\\FreeRTOS\\include",
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\Mid\\FreeRTOS\\portable",
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\Mid\\FreeRTOS",
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\Dri",
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\Inf",
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\Dri\\Usart",
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\App",
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\Com",
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\Inf\\Encoder",
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\Inf\\MPU6050",
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\Start",
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\User",
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\Mid\\FreeRTOS\\include",
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\Mid\\FreeRTOS\\portable",
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\Mid\\FreeRTOS",
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\Dri",
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\Inf",
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\Dri\\Usart",
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\App",
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\Com",
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\Inf\\Encoder",
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\Inf\\MPU6050",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include",
-                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine\\Mid\\FreeRTOS\\source"
+                "c:\\1stm32\\15_尚硅谷嵌入式项目之平衡车\\03_代码\\mine-bug-todo\\Mid\\FreeRTOS\\source"
             ],
             "defines": [
                 "STM32F10X_MD",

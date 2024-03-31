@@ -24,17 +24,17 @@ void Inf_TB6612_Init() {
 void Inf_TB6612_MotorA(uint8_t state) {
     switch (state) {
         case GO:
-            printf("A-GO\r\n");
+            // printf("A-GO\r\n");
             Ain1(0);
             Ain2(1);
             break;
         case BACK:
-            printf("A-BACK\r\n");
+            // printf("A-BACK\r\n");
             Ain1(1);
             Ain2(0);
             break;
         case BRAKE:
-            printf("A-BRAKE\r\n");
+            // printf("A-BRAKE\r\n");
             Ain1(1);
             Ain2(1);
             break;
@@ -47,17 +47,17 @@ void Inf_TB6612_MotorA(uint8_t state) {
 void Inf_TB6612_MotorB(uint8_t state) {
     switch (state) {
         case GO:
-            printf("B-GO\r\n");
+            // printf("B-GO\r\n");
             Bin1(0);
             Bin2(1);
             break;
         case BACK:
-            printf("B-BACK\r\n");
+            // printf("B-BACK\r\n");
             Bin1(1);
             Bin2(0);
             break;
         case BRAKE:
-            printf("B-BRAKE\r\n");
+            // printf("B-BRAKE\r\n");
             Bin1(1);
             Bin2(1);
             break;

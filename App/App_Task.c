@@ -2,6 +2,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "stdio.h"
+#include "App_Car.h"
 
 
 void Start_Task(void * parm);
@@ -9,19 +10,19 @@ void Task1(void * parm);
 void Task2(void * parm);
 void Task3(void * parm);
 
-#define START_TASK_DEPTH 128
+#define START_TASK_DEPTH 256
 #define TASK_PRIORITY 1
 TaskHandle_t start_task_handler;
 
-#define START1_TASK_DEPTH 128
+#define START1_TASK_DEPTH 256
 #define TASK1_PRIORITY 2
 TaskHandle_t start1_task_handler;
 
-#define START2_TASK_DEPTH 128
+#define START2_TASK_DEPTH 256
 #define TASK2_PRIORITY 3
 TaskHandle_t start2_task_handler;
 
-#define START3_TASK_DEPTH 128
+#define START3_TASK_DEPTH 256
 #define TASK3_PRIORITY 4
 TaskHandle_t start3_task_handler;
 
@@ -86,26 +87,30 @@ void Start_Task(void * parm) {
 }
 
 /**
- * @brief 任务1
+ * @brief 任务1： 倾斜角度、编码器值
  * 
  */
 void Task1(void * parm) {
+    TickType_t pxPreviousWakeTime = xTaskGetTickCount() ;
     while(1) {
-        printf("task1 is running ... \r\n");
-        vTaskDelay(500);
+        App_Car_GetAngle_Encoder();
+        xTaskNotifyGive(start3_task_handler);
+        vTaskDelayUntil(&pxPreviousWakeTime, 10);
+        printf("task1 is running...\r\n");
     }
     
 }
 
 /**
- * @brief 任务2
+ * @brief 任务2： oled显示
  * 
  */
 void Task2(void * parm) {
+    TickType_t pxPreviousWakeTime = xTaskGetTickCount() ;
     while(1) {
-
-        printf("task2 is running ... \r\n");
-        vTaskDelay(500);
+        App_Car_OLED();
+        vTaskDelayUntil(&pxPreviousWakeTime, 50);
+        printf("task2 is running...\r\n");
     }
 }
 
@@ -115,8 +120,9 @@ void Task2(void * parm) {
  */
 void Task3(void * parm) {
     while (1) {
+        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+        App_Car_Control();
         printf("task3 is running...\r\n");
-        vTaskDelay(500);
     }
     
 }

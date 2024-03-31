@@ -23,6 +23,7 @@
 ".\objects\app_task.o"
 ".\objects\app_car.o"
 ".\objects\com_filter.o"
+".\objects\com_pid.o"
 ".\objects\int_encoder.o"
 ".\objects\inf_mpu6050.o"
 --library_type=microlib --strict --scatter ".\Objects\car_register.sct"
