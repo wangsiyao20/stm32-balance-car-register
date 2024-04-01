@@ -14,14 +14,17 @@ void Task3(void * parm);
 #define TASK_PRIORITY 1
 TaskHandle_t start_task_handler;
 
+/* 获取角度、编码值任务配置 */
 #define START1_TASK_DEPTH 256
-#define TASK1_PRIORITY 2
+#define TASK1_PRIORITY 4
 TaskHandle_t start1_task_handler;
 
+/* oled显示屏 */
 #define START2_TASK_DEPTH 256
-#define TASK2_PRIORITY 3
+#define TASK2_PRIORITY 2
 TaskHandle_t start2_task_handler;
 
+/* PID控制任务 */
 #define START3_TASK_DEPTH 256
 #define TASK3_PRIORITY 4
 TaskHandle_t start3_task_handler;
@@ -115,7 +118,7 @@ void Task2(void * parm) {
 }
 
 /**
- * @brief 任务3
+ * @brief 任务3: 小车速度控制
  * 
  */
 void Task3(void * parm) {

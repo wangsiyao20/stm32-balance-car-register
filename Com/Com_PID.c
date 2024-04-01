@@ -15,8 +15,9 @@ int Com_PID_Balance(float angle, float gryo, float balance_angle, float Kp, floa
 
     
     /* 计算角度偏差 = 真实角度-平衡角度 */
-    float bias = angle - balance_angle;
-	printf("gyroY=%.1f\r\n",gryo);
+    float bias = 0;
+    bias = angle - balance_angle;
+	// printf("gyroY=%.1f\r\n",gryo);
     return Kp * bias + Kd * gryo;
 
 }

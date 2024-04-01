@@ -21,13 +21,26 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-c:\1stm32\15_尚硅谷嵌入式项目之平衡车\03_代码\mine\car_register.uvprojx
+c:\1stm32\15_尚硅谷嵌入式项目之平衡车\03_代码\mine-bug-todo\car_register.uvprojx
 Project File Date:  03/29/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\02_arm5_compiler\Bin'
 Build target 'Target 1'
-".\Objects\car_register.axf" - 0 Error(s), 0 Warning(s).
+compiling App_Car.c...
+App\App_Car.c(61): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+          Inf_OLED1315_ShowString(32, 0, BAT, 16, 1); /* 第一行===》BAT: 电压值，字体是8宽*16高 */
+App\App_Car.c(66): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+      Inf_OLED1315_ShowString(24, 16, EA, 16, 1); /* 第二行===》EA: 编码值，字体是8宽*16高 */
+App\App_Car.c(67): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+      Inf_OLED1315_ShowString(24, 32, EB, 16, 1); /* 第三行===》EB: 编码值，字体是8宽*16高 */
+App\App_Car.c(70): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+      Inf_OLED1315_ShowString(48, 48, AngleStr, 16, 1); /* 第四行===》Angle: 角度值，字体是8宽*16高 */
+App\App_Car.c: 4 warnings, 0 errors
+linking...
+Program Size: Code=15428 RO-data=8124 RW-data=304 ZI-data=18296  
+FromELF: creating hex file...
+".\Objects\car_register.axf" - 0 Error(s), 4 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -40,7 +53,7 @@ Package Vendor: Keil
   C:/Users/admin/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

@@ -10,27 +10,27 @@ int16_t encoder_Count2, encoder_Count3;  // 编码器计数值
 float GryoY = 0; // Y轴角速度
 float GryoZ = 0; // Z轴角速度
 
-// /* 直立环 */
-// float balance_angle = 5.0; // 角度机械中值 5.6
-// float balance_Kp = -540.0;  // -900
-// float balance_Kd = -7.8;   // -13
-
-// /* 速度环 */
-// float velocity_Kp = -180.0;  //
-// float velocity_Ki = -0.9;    // Kp=1/200 Kp
-
-// /* 转向环 */
-// float turn_Kp = 0.0;
-
 /* 直立环 */
-float balance_angle = 2.3; // 角度机械中值 2.0
-float balance_Kp = -900.0;  // -900
-float balance_Kd = -0.0;   // -13
+float balance_angle = 2.3; // 角度机械中值 5.6
+float balance_Kp = -640.0;  // -900
+float balance_Kd = -8.1;   // -13
+
 /* 速度环 */
-float velocity_Kp = -0.0;  //
-float velocity_Ki = -0.0;    // Kp=1/200 Kp
+float velocity_Kp = -180.0;  //
+float velocity_Ki = -0.9;    // Kp=1/200 Kp
+
 /* 转向环 */
 float turn_Kp = 0.0;
+
+// /* 直立环 */
+// float balance_angle = 2.3; // 角度机械中值 2.0
+// float balance_Kp = -850.0;  // -900
+// float balance_Kd = -12.0;   // -13
+// /* 速度环 */
+// float velocity_Kp = -0.0;  //
+// float velocity_Ki = -0.0;    // Kp=1/200 Kp
+// /* 转向环 */
+// float turn_Kp = 0.0;
 
 
 void App_Car_Init() {
@@ -39,7 +39,7 @@ void App_Car_Init() {
 	Inf_OLED1315_Init();    // oled显示屏
 	Inf_TB6612_Init();      // 电机驱动，（包括tim输出pwm方波）
 	Inf_MPU6050_Init();     // 加速度，，计算出角度
-    Int_Encoder_Init();     // 通过tim计算编码器的值
+    // Int_Encoder_Init();     // 通过tim计算编码器的值
 }
 
 
@@ -94,8 +94,8 @@ void App_Car_GetAngle_Encoder() {
     GryoZ = gz / 16.4;
     Com_Filter_Kalman(Acc_Angle, GryoY);
     // printf("经过卡尔曼滤波融合计算的角度=%2.1f\r\n",angle);
-    encoder_Count2 = Int_Encoder_ReadCounter(2);
-    encoder_Count3 = Int_Encoder_ReadCounter(3);
+    // encoder_Count2 = Int_Encoder_ReadCounter(2);
+    // encoder_Count3 = Int_Encoder_ReadCounter(3);
     // printf("读到的值为：%dxxxxxxx%d\r\n", encoder_Count2, encoder_Count3);
     //for(uint32_t i=100*72000/9; i>1; i--) __NOP();	// 延时100ms
 }
@@ -107,15 +107,15 @@ void App_Car_GetAngle_Encoder() {
 void App_Car_Control() {
 
     // 1.直立环PD控制
-    int balance_out = Com_PID_Balance(Acc_Angle, GryoY, balance_angle, balance_Kp, balance_Kd);
+    int balance_out = Com_PID_Balance(angle, GryoY, balance_angle, balance_Kp, balance_Kd);
 
     // 2.速度环PI控制
     int velocity_out = Com_PID_Velocity(encoder_Count2, encoder_Count3, velocity_Kp, velocity_Ki);
 
     // 3.转向环P控制
-    // int turn_out = Com_PID_Turn(gz, turn_Kp);
+    int turn_out = Com_PID_Turn(gz, turn_Kp);
 
-    int turn_out = 0;
+    // int turn_out = 0;
 
     // 4.通过PID算法设置到3个输出相加
     int PWMA = balance_out + velocity_out + turn_out;

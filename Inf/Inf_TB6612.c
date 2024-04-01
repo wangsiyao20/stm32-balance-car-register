@@ -22,47 +22,67 @@ void Inf_TB6612_Init() {
 
 /* 控制左电机方向 */
 void Inf_TB6612_MotorA(uint8_t state) {
-    switch (state) {
-        case GO:
-            // printf("A-GO\r\n");
-            Ain1(0);
-            Ain2(1);
-            break;
-        case BACK:
-            // printf("A-BACK\r\n");
-            Ain1(1);
-            Ain2(0);
-            break;
-        case BRAKE:
-            // printf("A-BRAKE\r\n");
-            Ain1(1);
-            Ain2(1);
-            break;
-        default:
-            break;
+    // switch (state) {
+    //     case GO:
+    //         // printf("A-GO\r\n");
+    //         Ain1(0);
+    //         Ain2(1);
+    //         break;
+    //     case BACK:
+    //         // printf("A-BACK\r\n");
+    //         Ain1(1);
+    //         Ain2(0);
+    //         break;
+    //     case BRAKE:
+    //         // printf("A-BRAKE\r\n");
+    //         Ain1(1);
+    //         Ain2(1);
+    //         break;
+    //     default:
+    //         break;
+    // }
+    if(state == GO) {
+        Ain1(0);
+        Ain2(1);
+    } else if(state == BACK) {
+        Ain1(1);
+        Ain2(0);
+    } else if(state == BRAKE) {
+        Ain1(1);
+        Ain2(1);
     }
 }
 
 /* 控制右电机方向 */
 void Inf_TB6612_MotorB(uint8_t state) {
-    switch (state) {
-        case GO:
-            // printf("B-GO\r\n");
-            Bin1(0);
-            Bin2(1);
-            break;
-        case BACK:
-            // printf("B-BACK\r\n");
-            Bin1(1);
-            Bin2(0);
-            break;
-        case BRAKE:
-            // printf("B-BRAKE\r\n");
-            Bin1(1);
-            Bin2(1);
-            break;
-        default:
-            break;
+    // switch (state) {
+    //     case GO:
+    //         // printf("B-GO\r\n");
+    //         Bin1(0);
+    //         Bin2(1);
+    //         break;
+    //     case BACK:
+    //         // printf("B-BACK\r\n");
+    //         Bin1(1);
+    //         Bin2(0);
+    //         break;
+    //     case BRAKE:
+    //         // printf("B-BRAKE\r\n");
+    //         Bin1(1);
+    //         Bin2(1);
+    //         break;
+    //     default:
+    //         break;
+    // }
+    if(state == GO) {
+        Bin1(0);
+        Bin2(1);
+    } else if(state == BACK) {
+        Bin1(1);
+        Bin2(0);
+    } else if(state == BRAKE) {
+        Bin1(1);
+        Bin2(1);
     }
 }
 
@@ -91,7 +111,7 @@ void Inf_TB6612_SetPWM(int pwma, int pwmb) {
         Inf_TB6612_MotorB(GO);
     }
 
-    // 设置pwmA值，TIM4_CH4
+    // 设置pwmA值，TIM4_CH3
     TIM4->CCR3 = abs(pwmb);
 }
 

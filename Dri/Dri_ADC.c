@@ -54,7 +54,7 @@ void Dri_ADC1_Init(void)
 
 double Dri_ADC1_ReadV(void)
 {
-    // 因为是不连续转换，座椅每次都要重开转换
+    // 因为是不连续转换，所以每次都要重开转换
     /* 3. ADON = 1, 开始转换 0>1 从休眠模式唤醒 1->1 开始 */
     ADC1->CR2 |= ADC_CR2_ADON;
 

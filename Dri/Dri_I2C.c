@@ -123,19 +123,18 @@ uint8_t Dri_I2C_SendAddr(uint8_t addr) {
 */
 uint8_t Dri_I2C_Transmit(uint8_t byte)
 {
-    /* 1.等待数据寄存器空 */
     uint16_t timeout = 0xffff;
-    while(!(I2C2->SR1&I2C_SR1_TXE) && timeout) {
+    while (((I2C2->SR1 & I2C_SR1_TXE) == 0) && timeout)
+    {
         timeout--;
     }
-    if(!timeout) return 0;
-
-    /* 2.往数据寄存器中写数据 */
+    // 把要发送的数据写入到数据寄存器
     I2C2->DR = byte;
 
-    /* 3. 通过SR1_BTF位判断数据是否发送结束，并返回 */
     timeout = 0xffff;
-    while(!(I2C2->SR1&I2C_SR1_BTF) && timeout) {
+
+    while (((I2C2->SR1 & I2C_SR1_BTF) == 0) && timeout)
+    {
         timeout--;
     }
     return timeout ? 1:0;
