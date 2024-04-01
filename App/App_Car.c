@@ -16,8 +16,8 @@ float balance_Kp = -640.0;  // -900
 float balance_Kd = -8.1;   // -13
 
 /* 速度环 */
-float velocity_Kp = -180.0;  //
-float velocity_Ki = -0.9;    // Kp=1/200 Kp
+float velocity_Kp = -0.0;  //
+float velocity_Ki = -0.0;    // Kp=1/200 Kp
 
 /* 转向环 */
 float turn_Kp = 0.0;
